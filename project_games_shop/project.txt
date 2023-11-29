@@ -1,0 +1,32 @@
+Buscar por nome, genero, preco
+
+
+Jogo(nome, genero, preco, id)
+
+
+Loja:
+    Lista de jogos(Jogos) - adicionar, remover, atualizar, exibir
+    Buscar()
+
+
+Biblioteca:
+    Lista de jogos comprados
+    Buscar()
+
+
+Comprar por id:
+    Ter saldo
+
+
+----------------------------------
+
+
+Usuario(nome, saldo)
+    ver lista
+    ver biblioteca
+    comprar 
+
+
+Administrador(nome):
+    herda de usuario
+    modificar lista
