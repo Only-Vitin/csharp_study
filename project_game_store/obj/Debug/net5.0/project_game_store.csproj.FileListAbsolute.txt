@@ -1,0 +1,16 @@
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.exe
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.deps.json
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.runtimeconfig.json
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.runtimeconfig.dev.json
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\ref\project_game_store.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\bin\Debug\net5.0\project_game_store.pdb
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.csproj.AssemblyReference.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.AssemblyInfoInputs.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.AssemblyInfo.cs
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.csproj.CoreCompileInputs.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\ref\project_game_store.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.pdb
+C:\Users\Projeto Trainee\Documents\csharp_study\project_game_store\obj\Debug\net5.0\project_game_store.genruntimeconfig.cache
