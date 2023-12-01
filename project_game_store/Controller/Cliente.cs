@@ -4,15 +4,34 @@ namespace project_game_store
 {
     public class Cliente
     {
-        public Cliente(string nome, double saldo)
+        private double _saldo = 100;
+        public Cliente(string nome, int idade)
         {
             Nome = nome;
-            Saldo = saldo;
+            Idade = idade;
         }
 
         public string Nome { get; }
-        public double Saldo { get; }
+        public int Idade { get; }
 
-        
+        private void SubtaiSaldo(double valorDoJogo)
+        {
+            _saldo -= valorDoJogo;
+        } 
+
+        public bool VerificaSaldo(double valorDoJogo)
+        {
+            if(_saldo >= valorDoJogo)
+            {
+                SubtaiSaldo(valorDoJogo);
+                return true;
+            }
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} - Saldo: {_saldo}";
+        }
     }
 }
