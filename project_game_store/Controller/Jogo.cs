@@ -18,5 +18,11 @@ namespace project_game_store
         public string Plataforma { get; }
         public bool Maior18 { get; }
         public double Preco { get; }
+
+        public override string ToString()
+        {
+            string boolMaior18 = Maior18 == true ? "Sim" : "Não";
+            return $"Nome: {Nome} - Genero: {Genero} - Plataforma: {Plataforma} - +18: {boolMaior18} - Preço: R$ {Preco}";
+        }
     }
 }

@@ -1,12 +1,13 @@
 using System;
+using System.Runtime.InteropServices;
 
 namespace project_game_store
 {
     public class OpcoesCliente
     {
-        public static void Executa(Cliente cliente)
+        public static bool Executa(Cliente cliente)
         {
-            inicio:
+            menuCliente:
             Menu.ExibeMenuCliente(cliente);
             int opcao = int.Parse(Console.ReadLine());
             if(opcao == 1)
@@ -16,20 +17,33 @@ namespace project_game_store
                 switch(opcao)
                 {
                     case 1:
-                        //Listar
+                        foreach (Jogo jogo in Loja.listaDeJogo)
+                        {
+                            Console.WriteLine(jogo);
+                        }
                         break;
                     case 2:
                         //Comprar
                         break;
                     case 3:
-                        goto inicio;
+                        goto menuCliente;
+                    default:
+                        Console.WriteLine("Digite uma dar opções acima");
+                        break;
                 }
+                return true;
             }
             else if(opcao == 2)
             {
                 Menu.ExibeMenuBibliotecaCliente();
                 opcao = int.Parse(Console.ReadLine());
+                return true;
             }
+            else if(opcao == 3)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

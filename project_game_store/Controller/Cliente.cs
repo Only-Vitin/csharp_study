@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace project_game_store
 {
     public class Cliente
     {
+        public List<Jogo> biblioteca = new(); 
         private double _saldo = 100;
         public Cliente(string nome, int idade)
         {

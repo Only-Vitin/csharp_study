@@ -9,7 +9,7 @@ namespace project_game_store
             Console.Clear();
             Console.WriteLine(cliente + "\n");
             Console.WriteLine("Selecione uma opção: ");
-            Console.WriteLine("1 -> Loja\n2 -> Biblioteca\n");
+            Console.WriteLine("1 -> Loja\n2 -> Biblioteca\n3 -> Logout");
         }
 
         public static void ExibeMenuLojaCliente()
