@@ -22,9 +22,12 @@ namespace project_game_store
                 string nome = Console.ReadLine();
                 Cliente cliente = new(nome, 100);
 
-                if(!OpcoesCliente.Executa(cliente)){
-                    Console.Clear();
-                    goto login;
+                while(true)
+                {
+                    if(!OpcoesCliente.Executa(cliente)){
+                        Console.Clear();
+                        goto login;
+                    }
                 }
             }
             else if(usuario == "adm")

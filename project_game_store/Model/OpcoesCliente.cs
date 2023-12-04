@@ -21,9 +21,13 @@ namespace project_game_store
                         {
                             Console.WriteLine(jogo);
                         }
+                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
+                        Console.ReadLine();
                         break;
                     case 2:
                         //Comprar
+                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
+                        Console.ReadLine();
                         break;
                     case 3:
                         goto menuCliente;

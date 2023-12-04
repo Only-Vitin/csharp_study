@@ -23,7 +23,7 @@ namespace project_game_store
         {
             Console.Clear();
             Console.WriteLine("Opções da Biblioteca: ");
-            Console.WriteLine("1 -> Listar os jogos disponiveis.\n2 -> Comprar um jogo.\n3 -> Voltar\n");
+            Console.WriteLine("1 -> Listar os jogos comprados.\n2 -> Instalar um jogo.\n3 -> Desinstalar um jogo\n4 -> Voltar\n");
         }
     }
 }
