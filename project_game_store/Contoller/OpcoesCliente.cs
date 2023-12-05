@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices;
 
 namespace project_game_store
 {
@@ -25,7 +24,8 @@ namespace project_game_store
                         Console.ReadLine();
                         break;
                     case 2:
-                        //Comprar
+                        Loja.CompraJogo(cliente);
+                        
                         Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
                         Console.ReadLine();
                         break;
@@ -41,12 +41,29 @@ namespace project_game_store
             {
                 Menu.ExibeMenuBibliotecaCliente();
                 opcao = int.Parse(Console.ReadLine());
+                switch (opcao)
+                {
+                    case 1:
+                        foreach (Jogo jogo in cliente.biblioteca)
+                        {
+                            Console.WriteLine(jogo);
+                        }
+                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    default:
+                        break;
+                }
                 return true;
             }
-            else if(opcao == 3)
-            {
-                return false;
-            }
+            else if(opcao == 3) return false;
+
             return true;
         }
     }

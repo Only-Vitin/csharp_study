@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Net.Mail;
+using System.Threading;
 
 namespace project_game_store
 {
@@ -7,12 +7,10 @@ namespace project_game_store
     {
         static void Main(string[] args)
         {
-            login:
             Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 123.32);
-            Jogo jogo2 = new("Cuphead", "Ação", "Desktop,Mobile", false, 50);
             Loja.listaDeJogo.Add(jogo1);
-            Loja.listaDeJogo.Add(jogo2);
-
+            
+            login:
             Logo.ExibeLogo();
             Console.Write("Quem deseja logar? adm - cliente: ");
             string usuario = Console.ReadLine();
@@ -20,11 +18,12 @@ namespace project_game_store
             {
                 Console.Write("\nDigite seu nome: ");
                 string nome = Console.ReadLine();
-                Cliente cliente = new(nome, 100);
+                Cliente cliente = new(nome, 17);
 
                 while(true)
                 {
-                    if(!OpcoesCliente.Executa(cliente)){
+                    if(!OpcoesCliente.Executa(cliente))
+                    {
                         Console.Clear();
                         goto login;
                     }
@@ -42,10 +41,16 @@ namespace project_game_store
                 }
 
                 Console.WriteLine("Logado");
+                Loja.AdicionaJogo();
+
+                goto login;
             }
             else
             {
-                Console.WriteLine("Por favor, escolha entre administrador ou cliente\n");
+                Console.WriteLine("\nPor favor, escolha entre administrador ou cliente\n");
+                Thread.Sleep(2000);
+                Console.Clear();
+                goto login;
             }
         }
     }

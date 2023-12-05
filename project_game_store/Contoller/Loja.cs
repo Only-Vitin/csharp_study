@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Security.Principal;
+using System.Linq;
 
 namespace project_game_store
 {
@@ -22,6 +21,21 @@ namespace project_game_store
             Jogo jogo = new(nome, genero, plataforma, maior18, preco);
 
             listaDeJogo.Add(jogo);
+        }
+
+        public static void CompraJogo(Cliente cliente)
+        {
+            Console.WriteLine("Qual o id do jogo deseja comprar? ");
+            int idJogo = int.Parse(Console.ReadLine());
+
+            Jogo jogoEscolhido = listaDeJogo.First(j => j.id.Equals(idJogo));
+
+            if(cliente.VerificaSaldo(jogoEscolhido.Preco) && cliente.VerificaIdade(jogoEscolhido.Maior18))
+            {
+                cliente.biblioteca.Add(jogoEscolhido);
+                listaDeJogo.Remove(jogoEscolhido);
+                Console.WriteLine("Comprado, verifique a biblioteca");
+            }
         }
     }
 }

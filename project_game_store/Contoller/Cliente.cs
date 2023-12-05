@@ -28,12 +28,23 @@ namespace project_game_store
                 SubtaiSaldo(valorDoJogo);
                 return true;
             }
+            
+            Console.WriteLine("Você não tem saldo suficiente!");
+            return false;
+        }
+
+        public bool VerificaIdade(bool maior18)
+        {
+            if(!maior18) return true;
+            if(Idade >= 18) return true;
+
+            Console.WriteLine("Você precisa ter no mínimo 18 anos!");
             return false;
         }
 
         public override string ToString()
         {
-            return $"Nome: {Nome} - Saldo: {_saldo}";
+            return $"Nome: {Nome} - Idade: {Idade} - Saldo: {_saldo}";
         }
     }
 }
