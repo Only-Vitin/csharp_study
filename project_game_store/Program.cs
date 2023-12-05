@@ -10,19 +10,19 @@ namespace project_game_store
             Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 123.32);
             Loja.listaDeJogo.Add(jogo1);
             
-            login:
             Logo.ExibeLogo();
+            login:
             Console.Write("Quem deseja logar? adm - cliente: ");
             string usuario = Console.ReadLine();
             if(usuario == "cliente")
             {
                 Console.Write("\nDigite seu nome: ");
                 string nome = Console.ReadLine();
-                Cliente cliente = new(nome, 17);
+                Cliente cliente = new(nome, 5);
 
                 while(true)
                 {
-                    if(!OpcoesCliente.Executa(cliente))
+                    if(!OpcoesCliente.SelecionaOpcoes(cliente))
                     {
                         Console.Clear();
                         goto login;
@@ -37,6 +37,7 @@ namespace project_game_store
                 if(senhaDigitada != senha)
                 {
                     Console.Clear();
+                    Console.WriteLine("*** Senha Errada ***\n");
                     goto login;
                 }
 
@@ -48,8 +49,9 @@ namespace project_game_store
             else
             {
                 Console.WriteLine("\nPor favor, escolha entre administrador ou cliente\n");
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 Console.Clear();
+                Logo.ExibeLogo();
                 goto login;
             }
         }

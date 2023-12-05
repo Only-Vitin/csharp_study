@@ -4,7 +4,7 @@ namespace project_game_store
 {
     public class OpcoesCliente
     {
-        public static bool Executa(Cliente cliente)
+        public static bool SelecionaOpcoes(Cliente cliente)
         {
             menuCliente:
             Menu.ExibeMenuCliente(cliente);
@@ -16,18 +16,12 @@ namespace project_game_store
                 switch(opcao)
                 {
                     case 1:
-                        foreach (Jogo jogo in Loja.listaDeJogo)
-                        {
-                            Console.WriteLine(jogo);
-                        }
-                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
-                        Console.ReadLine();
+                        FuncoesLojaCliente.ListaJogos();
+                        Tecla.TeclaVoltar();
                         break;
                     case 2:
                         Loja.CompraJogo(cliente);
-                        
-                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
-                        Console.ReadLine();
+                        Tecla.TeclaVoltar();
                         break;
                     case 3:
                         goto menuCliente;
@@ -44,19 +38,17 @@ namespace project_game_store
                 switch (opcao)
                 {
                     case 1:
-                        foreach (Jogo jogo in cliente.biblioteca)
-                        {
-                            Console.WriteLine(jogo);
-                        }
-                        Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
-                        Console.ReadLine();
+                        FuncoesBibliotecaCliente.ListaJogos(cliente);
+                        Tecla.TeclaVoltar();
                         break;
                     case 2:
+                        Tecla.TeclaVoltar();
                         break;
                     case 3:
+                        Tecla.TeclaVoltar();
                         break;
                     case 4:
-                        break;
+                        goto menuCliente;
                     default:
                         break;
                 }
