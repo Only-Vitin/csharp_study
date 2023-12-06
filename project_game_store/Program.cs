@@ -7,7 +7,7 @@ namespace project_game_store
     {
         static void Main(string[] args)
         {
-            Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 123.32);
+            Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 90.32);
             Loja.listaDeJogo.Add(jogo1);
             
             Logo.ExibeLogo();
@@ -43,7 +43,6 @@ namespace project_game_store
 
                 Console.WriteLine("Logado");
                 Loja.AdicionaJogo();
-
                 goto login;
             }
             else

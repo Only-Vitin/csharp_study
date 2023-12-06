@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace project_game_store
 {
@@ -7,56 +8,64 @@ namespace project_game_store
         public static bool SelecionaOpcoes(Cliente cliente)
         {
             menuCliente:
-            Menu.ExibeMenuCliente(cliente);
-            int opcao = int.Parse(Console.ReadLine());
-            if(opcao == 1)
+            try
             {
-                Menu.ExibeMenuLojaCliente();
-                opcao = int.Parse(Console.ReadLine());
-                switch(opcao)
+                Menu.ExibeMenuCliente(cliente);
+                int opcao = int.Parse(Console.ReadLine());
+                if(opcao == 1)
                 {
-                    case 1:
-                        FuncoesLojaCliente.ListaJogos();
-                        Tecla.TeclaVoltar();
-                        break;
-                    case 2:
-                        Loja.CompraJogo(cliente);
-                        Tecla.TeclaVoltar();
-                        break;
-                    case 3:
-                        goto menuCliente;
-                    default:
-                        Console.WriteLine("Digite uma dar opções acima");
-                        break;
+                    Menu.ExibeMenuLojaCliente();
+                    opcao = int.Parse(Console.ReadLine());
+                    switch(opcao)
+                    {
+                        case 1:
+                            FuncoesLojaCliente.ListaJogos();
+                            Tecla.TeclaVoltar();
+                            break;
+                        case 2:
+                            Loja.CompraJogo(cliente);
+                            Tecla.TeclaVoltar();
+                            break;
+                        case 3:
+                            goto menuCliente;
+                        default:
+                            throw new FormatException();
+                    }
+                    return true;
                 }
-                return true;
+                else if(opcao == 2)
+                {
+                    Menu.ExibeMenuBibliotecaCliente();
+                    opcao = int.Parse(Console.ReadLine());
+                    switch (opcao)
+                    {
+                        case 1:
+                            FuncoesBibliotecaCliente.ListaJogos(cliente);
+                            Tecla.TeclaVoltar();
+                            break;
+                        case 2:
+                            Tecla.TeclaVoltar();
+                            break;
+                        case 3:
+                            Tecla.TeclaVoltar();
+                            break;
+                        case 4:
+                            goto menuCliente;
+                        default:
+                            throw new FormatException();
+                    }
+                    return true;
+                }
+                else if(opcao == 3) return false;
+                else throw new FormatException();
             }
-            else if(opcao == 2)
+            catch(FormatException)
             {
-                Menu.ExibeMenuBibliotecaCliente();
-                opcao = int.Parse(Console.ReadLine());
-                switch (opcao)
-                {
-                    case 1:
-                        FuncoesBibliotecaCliente.ListaJogos(cliente);
-                        Tecla.TeclaVoltar();
-                        break;
-                    case 2:
-                        Tecla.TeclaVoltar();
-                        break;
-                    case 3:
-                        Tecla.TeclaVoltar();
-                        break;
-                    case 4:
-                        goto menuCliente;
-                    default:
-                        break;
-                }
-                return true;
+                Console.WriteLine("*** Digite apenas o número de uma das opções acima ***");
+                Thread.Sleep(1000);
+                Console.Clear();
+                goto menuCliente;
             }
-            else if(opcao == 3) return false;
-
-            return true;
         }
     }
 }
