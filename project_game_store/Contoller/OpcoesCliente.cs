@@ -44,9 +44,15 @@ namespace project_game_store
                             Tecla.TeclaVoltar();
                             break;
                         case 2:
+                            Console.Write("Qual o id do jogo que deseja instalar? ");
+                            int idJogo = int.Parse(Console.ReadLine());
+                            cliente.InstalaJogo(idJogo);
                             Tecla.TeclaVoltar();
                             break;
                         case 3:
+                            Console.Write("Qual o id do jogo que deseja desinstalar? ");
+                            idJogo = int.Parse(Console.ReadLine());
+                            cliente.DesinstalaJogo(idJogo);
                             Tecla.TeclaVoltar();
                             break;
                         case 4:

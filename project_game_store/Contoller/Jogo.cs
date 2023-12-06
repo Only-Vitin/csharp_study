@@ -30,10 +30,15 @@ namespace project_game_store
         }
         
         public int id = GeraId();
+        public bool instalado = false;
 
         public override string ToString()
-        {
+        {   
             string boolMaior18 = Maior18 == true ? "Sim" : "Não";
+            if(instalado)
+            {
+                return $"Id: {id} => Nome: {Nome} - Genero: {Genero} - Plataforma: {Plataforma} - +18: {boolMaior18} - Preço: R$ {Preco} (INSTALADO)";
+            }
             return $"Id: {id} => Nome: {Nome} - Genero: {Genero} - Plataforma: {Plataforma} - +18: {boolMaior18} - Preço: R$ {Preco}";
         }
     }

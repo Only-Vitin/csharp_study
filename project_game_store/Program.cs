@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace project_game_store
 {
     class Program
     {
+        public static List<Cliente> listaDeClientes = new();
+
         static void Main(string[] args)
         {
             Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 90.32);
@@ -17,12 +20,15 @@ namespace project_game_store
             if(usuario == "cliente")
             {
                 Console.Write("\nDigite seu nome: ");
-                string nome = Console.ReadLine();
-                Cliente cliente = new(nome, 5);
+                string nomeDigitado = Console.ReadLine();
+                Console.Write("\nDigite sua idade: ");
+                int idade = int.Parse(Console.ReadLine());
+
+                Cliente clienteAtual = SelecionaCliente.Executa(nomeDigitado, idade);
 
                 while(true)
                 {
-                    if(!OpcoesCliente.SelecionaOpcoes(cliente))
+                    if(!OpcoesCliente.SelecionaOpcoes(clienteAtual))
                     {
                         Console.Clear();
                         goto login;
