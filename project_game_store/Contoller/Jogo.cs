@@ -1,5 +1,3 @@
-using System.Linq;
-
 namespace project_game_store
 {
     public class Jogo
