@@ -5,7 +5,7 @@ namespace project_game_store
 {
     public class OpcoesCliente
     {
-        public static bool SelecionaOpcoes(Cliente cliente)
+        public static bool SelecionaOpcoes(Cliente cliente, Loja loja)
         {
             menuCliente:
             try
@@ -19,11 +19,11 @@ namespace project_game_store
                     switch(opcao)
                     {
                         case 1:
-                            FuncoesLojaCliente.ListaJogos();
+                            FuncoesLojaCliente.ListaJogos(loja);
                             Tecla.TeclaVoltar();
                             break;
                         case 2:
-                            Loja.CompraJogo(cliente);
+                            Loja.CompraJogo(cliente, loja);
                             Tecla.TeclaVoltar();
                             break;
                         case 3:

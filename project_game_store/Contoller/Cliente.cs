@@ -21,9 +21,10 @@ namespace project_game_store
         private static double GeraSaldo()
         {   
             double min = 150;
-            double max = 5000;
+            double max = 1000;
             Random random = new();
-            return random.NextDouble() * (max - min) + min;
+            double numeroRandom = random.NextDouble() * (max - min) + min;
+            return Math.Round(numeroRandom, 2);
         }
 
         private void SubtaiSaldo(double valorDoJogo)

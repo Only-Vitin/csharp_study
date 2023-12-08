@@ -20,13 +20,9 @@ namespace project_game_store
         public double Preco { get; }
 
         private static int GeraId()
-        {
-            int quantJogos = Loja.listaDeJogo.Count;
-            if(quantJogos == 0)
-            {
-                return 1;
-            }
-            return Loja.listaDeJogo.Max(jogo => jogo.id) + 1;
+        {   
+            Program.id ++;
+            return Program.id;
         }
         
         public int id = GeraId();

@@ -4,9 +4,9 @@ namespace project_game_store
 {
     public class FuncoesLojaCliente
     {
-        public static void ListaJogos()
+        public static void ListaJogos(Loja loja)
         {
-            foreach (Jogo jogo in Loja.listaDeJogo)
+            foreach (Jogo jogo in loja.listaDeJogo)
             {
                 Console.WriteLine(jogo);
             }

@@ -7,12 +7,11 @@ namespace project_game_store
     class Program
     {
         public static List<Cliente> listaDeClientes = new();
+        public static List<Loja> listaDeLojas = new();
+        public static int id;
 
         static void Main(string[] args)
-        {
-            Jogo jogo1 = new("Minecraft", "Aventura", "Xbox,Desktop,Mobile", false, 90.32);
-            Loja.listaDeJogo.Add(jogo1);
-            
+        {   
             Logo.ExibeLogo();
             login:
             Console.Write("Quem deseja logar? adm - cliente: ");
@@ -24,11 +23,13 @@ namespace project_game_store
                 Console.Write("\nDigite sua idade: ");
                 int idade = int.Parse(Console.ReadLine());
 
-                Cliente clienteAtual = SelecionaCliente.Executa(nomeDigitado, idade);
+                Cliente clienteAtual = SelecionaCliente.ClienteAtual(nomeDigitado, idade);
+                Loja lojaAtual = SelecionaCliente.SelecionaLoja(clienteAtual);
+
 
                 while(true)
                 {
-                    if(!OpcoesCliente.SelecionaOpcoes(clienteAtual))
+                    if(!OpcoesCliente.SelecionaOpcoes(clienteAtual, lojaAtual))
                     {
                         Console.Clear();
                         goto login;
