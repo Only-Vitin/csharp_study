@@ -41,7 +41,7 @@ namespace Main
             else if(usuario == "adm")
             {
                 Console.Write("Digite a senha: ");
-                string senhaDigitada = Console.ReadLine();
+                string senhaDigitada = GetSenha();
                 string senha = "123";
                 if(senhaDigitada != senha)
                 {
@@ -65,6 +65,25 @@ namespace Main
                 Thread.Sleep(1000);
                 goto login;
             }
+        }
+
+        static string GetSenha()
+        {
+            string senha = "";
+            ConsoleKeyInfo key;
+
+            do
+            {
+                key = Console.ReadKey(true);
+                if (key.Key != ConsoleKey.Enter && key.Key != ConsoleKey.Backspace)
+                {
+                    senha += key.KeyChar;
+                    Console.Write("*");
+                }
+
+            }while(key.Key != ConsoleKey.Enter);
+
+            return senha;
         }
     }
 }
