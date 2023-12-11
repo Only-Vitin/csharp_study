@@ -1,7 +1,10 @@
 using System;
 using System.Threading;
+using Entidades;
+using Utils;
+using View;
 
-namespace project_game_store
+namespace Opcoes
 {
     public class OpcoesCliente
     {
@@ -68,6 +71,13 @@ namespace project_game_store
             catch(FormatException)
             {
                 Console.WriteLine("*** Digite apenas o número de uma das opções acima ***");
+                Thread.Sleep(1000);
+                Console.Clear();
+                goto menuCliente;
+            }
+            catch(InvalidOperationException)
+            {
+                Console.WriteLine("*** Opção Inválida ***");
                 Thread.Sleep(1000);
                 Console.Clear();
                 goto menuCliente;

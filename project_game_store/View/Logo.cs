@@ -1,6 +1,6 @@
 using System;
 
-namespace project_game_store
+namespace View
 {
     public class Logo
     {

@@ -1,6 +1,8 @@
 using System;
 
-namespace project_game_store
+using Entidades;
+
+namespace Opcoes
 {
     public class FuncoesLojaCliente
     {

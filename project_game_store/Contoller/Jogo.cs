@@ -1,4 +1,9 @@
-namespace project_game_store
+using System.Collections.Generic;
+using System.Linq;
+
+using Main;
+
+namespace Entidades
 {
     public class Jogo
     {
@@ -17,14 +22,24 @@ namespace project_game_store
         public bool Maior18 { get; }
         public double Preco { get; }
 
-        private static int GeraId()
+        public int GeraId()
         {   
+            Loja firstLoja = Program.listaDeLojas.First();
+            Cliente firstCliente = Program.listaDeClientes.First(n => n.Nome == firstLoja.NomeLoja);
+            List<Jogo> todosJogos = firstLoja.listaDeJogo.Concat(firstCliente.biblioteca).ToList();
+            foreach(Jogo jogo in todosJogos)
+            {
+                if(Nome.Equals(jogo.Nome))
+                {
+                    return jogo.id;
+                }
+            }
             Program.id ++;
             return Program.id;
         }
-        
-        public int id = GeraId();
+
         public bool instalado = false;
+        public int id;
 
         public override string ToString()
         {   

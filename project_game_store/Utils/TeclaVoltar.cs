@@ -1,6 +1,6 @@
 using System;
 
-namespace project_game_store
+namespace Utils
 {
     public class Tecla
     {

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Main;
+using Opcoes;
 
-namespace project_game_store
+namespace Entidades
 {
     public class Loja
     {
@@ -20,16 +22,22 @@ namespace project_game_store
             inicioAddJogo:
             try
             {
+                if(Program.listaDeLojas.Count == 0)
+                {
+                    Console.WriteLine("Não tem nenhuma loja para adicionar");
+                }
+
+                Console.Write("Digite o nome, o genero, a plataforma, se é para maiores de 18 e o preço (separado por espaço): ");
+                string[] infos = Console.ReadLine().Split(' ');
+                string nome = infos[0], genero = infos[1], plataforma = infos[2];
+                bool maior18 = bool.Parse(infos[3]);
+                double preco = double.Parse(infos[4]);
+                
                 foreach(Loja loja in Program.listaDeLojas)
                 {
-                    Console.Write("Digite o nome, o genero, a plataforma, se é para maiores de 18 e o preço (separado por espaço): ");
-                    string[] infos = Console.ReadLine().Split(' ');
-                    string nome = infos[0], genero = infos[1], plataforma = infos[2];
-                    bool maior18 = bool.Parse(infos[3]);
-                    double preco = double.Parse(infos[4]);
-
                     FuncoesLoja.AdicionaJogoService(nome, genero, plataforma, maior18, preco, loja);
                 }
+                Console.WriteLine("\nJogo adicionado");
             }
             catch(FormatException)
             {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace project_game_store
+namespace Entidades
 {
     public class Cliente
     {
@@ -11,7 +11,14 @@ namespace project_game_store
         public Cliente(string nome, int idade)
         {
             Nome = nome;
-            Idade = idade;
+            if(idade > 0 && idade < 200)
+            {
+                Idade = idade;
+            }
+            else
+            {
+                throw new FormatException();
+            }
         }
 
         public string Nome { get; }

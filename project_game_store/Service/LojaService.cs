@@ -1,13 +1,16 @@
 using System;
 using System.Linq;
 
-namespace project_game_store
+using Entidades;
+
+namespace Opcoes
 {
     public class FuncoesLoja
     {
         public static void AdicionaJogoService(string nome, string genero, string plataforma, bool maior18, double preco, Loja loja)
-        {
+        {   
             Jogo jogo = new(nome, genero, plataforma, maior18, preco);
+            jogo.id = jogo.GeraId();
             loja.listaDeJogo.Add(jogo);
         }
 

@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace project_game_store
+using View;
+using Entidades;
+using Opcoes;
+using Utils;
+
+namespace Main
 {
     class Program
     {
@@ -10,28 +15,25 @@ namespace project_game_store
         public static List<Loja> listaDeLojas = new();
         public static int id;
 
-        static void Main(string[] args)
+        static void Main()
         {   
-            Logo.ExibeLogo();
             login:
+            Console.Clear();
+            Logo.ExibeLogo();
             Console.Write("Quem deseja logar? adm - cliente: ");
             string usuario = Console.ReadLine();
             if(usuario == "cliente")
             {
                 Console.Write("\nDigite seu nome: ");
                 string nomeDigitado = Console.ReadLine();
-                Console.Write("\nDigite sua idade: ");
-                int idade = int.Parse(Console.ReadLine());
 
-                Cliente clienteAtual = SelecionaCliente.ClienteAtual(nomeDigitado, idade);
+                Cliente clienteAtual = SelecionaCliente.ClienteAtual(nomeDigitado);
                 Loja lojaAtual = SelecionaCliente.SelecionaLoja(clienteAtual);
-
 
                 while(true)
                 {
                     if(!OpcoesCliente.SelecionaOpcoes(clienteAtual, lojaAtual))
                     {
-                        Console.Clear();
                         goto login;
                     }
                 }
@@ -49,15 +51,18 @@ namespace project_game_store
                 }
 
                 Console.WriteLine("Logado");
-                Loja.AdicionaJogo();
-                goto login;
+                while(true)
+                {
+                    if(!OpcoesAdm.SelecionaOpcoes())
+                    {
+                        goto login;
+                    }
+                }
             }
             else
             {
                 Console.WriteLine("\nPor favor, escolha entre administrador ou cliente\n");
                 Thread.Sleep(1000);
-                Console.Clear();
-                Logo.ExibeLogo();
                 goto login;
             }
         }
