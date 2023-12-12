@@ -1,3 +1,8 @@
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.csproj.AssemblyReference.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.AssemblyInfoInputs.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.AssemblyInfo.cs
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.csproj.CoreCompileInputs.cache
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\appsettings.json
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\web_api.exe
@@ -11,11 +16,6 @@ C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microso
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.csproj.AssemblyReference.cache
-C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.AssemblyInfoInputs.cache
-C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.AssemblyInfo.cs
-C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.csproj.CoreCompileInputs.cache
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\staticwebassets\web_api.StaticWebAssets.Manifest.cache
