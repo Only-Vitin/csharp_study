@@ -16,7 +16,7 @@ namespace Main
         public static int id;
 
         static void Main()
-        {   
+        {
             login:
             Console.Clear();
             Logo.ExibeLogo();
@@ -41,7 +41,7 @@ namespace Main
             else if(usuario == "adm")
             {
                 Console.Write("Digite a senha: ");
-                string senhaDigitada = GetSenha();
+                string senhaDigitada = GetSenha.Senha();
                 string senha = "123";
                 if(senhaDigitada != senha)
                 {
@@ -65,25 +65,6 @@ namespace Main
                 Thread.Sleep(1000);
                 goto login;
             }
-        }
-
-        static string GetSenha()
-        {
-            string senha = "";
-            ConsoleKeyInfo key;
-
-            do
-            {
-                key = Console.ReadKey(true);
-                if (key.Key != ConsoleKey.Enter && key.Key != ConsoleKey.Backspace)
-                {
-                    senha += key.KeyChar;
-                    Console.Write("*");
-                }
-
-            }while(key.Key != ConsoleKey.Enter);
-
-            return senha;
         }
     }
 }
