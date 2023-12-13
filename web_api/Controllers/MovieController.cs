@@ -1,7 +1,8 @@
 using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 
 using web_api.Models;
 
@@ -12,12 +13,30 @@ namespace web_api.Controllers
     public class MovieController : ControllerBase
     {
         private static List<Movie> movies = new();
+        private static int id = 1;
 
         [HttpPost]
-        public void AddMovie([FromBody] Movie movie)
+        public IActionResult PostMovie([FromBody] Movie movie)
         {
             movies.Add(movie);
-            Console.WriteLine(movie.Title);
+            movie.Id = id++;
+            
+            return CreatedAtAction(nameof(GetMovieById), new { Id = movie.Id }, movie);
+        }
+
+        [HttpGet]
+        public IActionResult GetMovie()
+        {
+            return Ok(movies);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetMovieById(int id)
+        {   
+            Movie selectedMovie = movies.FirstOrDefault(i => i.Id == id);
+            if(selectedMovie != null) return Ok(selectedMovie);
+            
+            return NotFound();
         }
     }
 }

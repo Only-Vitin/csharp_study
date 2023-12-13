@@ -27,3 +27,17 @@ C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\ref\web_api.dll
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.pdb
 C:\Users\Projeto Trainee\Documents\csharp_study\web_api\obj\Debug\net5.0\web_api.genruntimeconfig.cache
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\MySql.Data.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\MySql.Data.EntityFrameworkCore.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\runtimes\win7-x64\native\sni.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\runtimes\win7-x86\native\sni.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\Projeto Trainee\Documents\csharp_study\web_api\bin\Debug\net5.0\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
