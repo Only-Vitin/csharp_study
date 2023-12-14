@@ -6,6 +6,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project_game_store", "proje
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web_api", "web_api\web_api.csproj", "{F4C25E8E-26B3-4EE4-AC6A-C08BED919123}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pacman", "pacman\pacman.csproj", "{F4C25E8E-26B3-4EE4-AC6A-C08BED919124}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

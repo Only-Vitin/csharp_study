@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using Microsoft.VisualBasic;
 
 namespace pacman.Controller
 {
@@ -12,10 +9,13 @@ namespace pacman.Controller
         
         public static void ReadMap()
         {
-            var lines = File.ReadAllLines(@"C:\Users\Projeto Trainee\Documents\csharp_study\pacman\Map.txt");
-            foreach(var line in lines)
-            {
-
+            string path = Path.GetFullPath("Map.txt");
+            var lines = File.ReadAllLines(path);
+            for(int i = 0; i < lines.GetLength(0); i++){
+                foreach(char line in lines[i])
+                {
+                    Console.WriteLine(line);
+                }
             }
         }
     }
