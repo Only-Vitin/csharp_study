@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using web_api.Data;
+using AutoMapper;
+using System;
 
 namespace web_api
 {
@@ -22,7 +24,8 @@ namespace web_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MovieContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MovieConnection")));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddDbContext<MovieContext>(opts => opts.UseMySql(Configuration.GetConnectionString("MovieConnection"), ServerVersion.AutoDetect(Configuration.GetConnectionString("MovieConnection"))));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
